@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style.css" />
+    <title>Konversi Satuan Jarak</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Konversi Satuan</h1>
+    <div class="form">
+    <form method="POST">    
+        <label for ="number">Masukan Angka:</label>
+        <input type ="number" id="number" name="number" required>
+        
+        <div class="awal">
+            <p>Pilih Satuan Awal</p>
+            <select id="satuan_awal" name="satuan_awal">
+                <option value="km">km</option>
+                <option value="hm">hm</option>
+                <option value="dam">dam</option>
+                <option value="m">m</option>
+                <option value="dm">dm</option>
+                <option value="cm">cm</option>
+                <option value="mm">mm</option>
+            </div>
+        </select>
+        <div class="akhir">
+        <p>Pilih Satuan Akhir</p>
+        <select id="satuan_akhir" name="satuan_akhir">
+            <option value="km">km</option>
+            <option value="hm">hm</option>
+            <option value="dam">dam</option>
+            <option value="m">m</option>
+            <option value="dm">dm</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+        </select>
+
+        </div>
+    </div>
+    </div>
+        <button type="submit">Hitung Konversi</button>
+    </form>
+
+    
+    {% if result is not none %}
+        <h2>Hasil: {{result}}</h2>
+    {% endif %}
+</body>
+</html> 
